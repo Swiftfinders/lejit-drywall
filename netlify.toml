@@ -1,0 +1,56 @@
+# Netlify Configuration File for Lejit Drywall Website
+
+[build]
+  # No build command needed for static site
+  command = ""
+
+  # Publish directory (root directory)
+  publish = "."
+
+# Redirect rules
+[[redirects]]
+  from = "/home"
+  to = "/index.html"
+  status = 301
+
+# 404 page configuration
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache control for static assets
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML pages should not be cached as aggressively
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Form submission settings
+[forms]
+  # Enable Netlify Forms
+  enabled = true

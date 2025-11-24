@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Thank You - Lejit Drywall</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">LEJIT DRYWALL</a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="why-us.html" class="nav-link">Why Us</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="quote.html" class="nav-link btn btn-secondary" style="padding: 0.5rem 1.5rem;">Get Quote</a></li>
+            </ul>
+            <div class="phone-number">📞 (XXX) XXX-XXXX</div>
+            <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Toggle navigation menu">☰</button>
+        </nav>
+    </header>
+
+    <!-- Success Message -->
+    <section class="section" style="min-height: 70vh; display: flex; align-items: center;">
+        <div class="container">
+            <div class="text-center max-w-800" style="margin: 0 auto;">
+                <div style="font-size: 5rem; margin-bottom: 2rem;">✓</div>
+                <h1>Thank You for Your Request!</h1>
+                <p style="font-size: 1.25rem; margin: 2rem 0;">
+                    We've received your quote request and will respond within 24 hours.
+                </p>
+                <p>
+                    One of our drywall specialists will review your project details and contact you
+                    via your preferred method to discuss next steps.
+                </p>
+                <div style="margin-top: 3rem;">
+                    <h3>What's Next?</h3>
+                    <div class="grid grid-3" style="margin-top: 2rem;">
+                        <div class="card">
+                            <h4>1. Review</h4>
+                            <p>We'll carefully review your project requirements.</p>
+                        </div>
+                        <div class="card">
+                            <h4>2. Contact</h4>
+                            <p>We'll reach out within 24 hours to discuss details.</p>
+                        </div>
+                        <div class="card">
+                            <h4>3. Quote</h4>
+                            <p>You'll receive a detailed written estimate.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 3rem;">
+                    <p><strong>Need immediate assistance?</strong></p>
+                    <p style="font-size: 1.5rem; font-weight: 700; margin: 1rem 0;">📞 (XXX) XXX-XXXX</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="index.html" class="btn btn-secondary">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>LEJIT DRYWALL</h3>
+                    <p>Professional drywall services in Southern Ontario. Licensed, insured, and committed to quality craftsmanship.</p>
+                    <p><strong>Phone:</strong> (XXX) XXX-XXXX</p>
+                    <p><strong>Email:</strong> info@lejitdrywall.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-us.html">Why Choose Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#installation">Drywall Installation</a></li>
+                        <li><a href="services.html#framing">Framing</a></li>
+                        <li><a href="services.html#mudding">Mudding & Taping</a></li>
+                        <li><a href="services.html#repair">Patch & Repair</a></li>
+                        <li><a href="services.html#finishing">Finishing & Texturing</a></li>
+                        <li><a href="services.html#popcorn">Popcorn Removal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Service Areas</h3>
+                    <ul class="footer-links">
+                        <li>Toronto</li>
+                        <li>Mississauga</li>
+                        <li>Hamilton</li>
+                        <li>Burlington</li>
+                        <li>Oakville</li>
+                        <li>Brampton</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Lejit Drywall. All rights reserved. | Licensed & Insured | Southern Ontario's Premier Drywall Specialists</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        mobileToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+        document.addEventListener('click', function(event) {
+            const isClickInside = navMenu.contains(event.target) || mobileToggle.contains(event.target);
+            if (!isClickInside && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                mobileToggle.textContent = '☰';
+            }
+        });
+    </script>
+</body>
+</html>
