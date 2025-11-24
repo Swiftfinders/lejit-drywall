@@ -1,0 +1,12 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E0E0E0"/>
+  <text x="50%" y="45%" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#333" text-anchor="middle" dominant-baseline="middle">
+    POPCORN REMOVAL
+  </text>
+  <text x="50%" y="55%" font-family="Arial, sans-serif" font-size="20" fill="#666" text-anchor="middle" dominant-baseline="middle">
+    Placeholder Image
+  </text>
+  <text x="50%" y="65%" font-family="Arial, sans-serif" font-size="16" fill="#999" text-anchor="middle" dominant-baseline="middle">
+    1200 x 800
+  </text>
+</svg>
